@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - _21ngaydem</title>
+
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/layout.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="~/css/order.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div style="padding-top: 15px">
+                <div class="contact_header">
+                    <span style="color: black">Need help ? <span style="color:darkgray">call us<span style="color: red">1-22-3456789</span></span></span>
+                </div>
+                <div class="link_header">
+                    <ul>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Checkout</a></li>
+                        <li><a href="#">My Account</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr style="color: darkgray" />
+        <div class="container">
+            <div class="logo_header">
+                <div class="logo_header_img">
+                    <img src="~/img/logo1.png" />
+                </div>
+                <div class="logo_header_title">
+                    WELLCOME TO SHOPPE! <span style="color: red; font-size: 15px">Cart: 0 item - 0$</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark" style="margin: 0px; padding: 0px">
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav" style="width: 100%">
+                        <li class="navbar_myself active_navbar">
+                            <a href="#">HOME</a>
+                        </li>
+                        <li class="navbar_myself">
+                            <a href="#">ABOUT</a>
+                        </li>
+                        <li class="navbar_myself">
+                            <a href="#">NEWS</a>
+                        </li>
+                        <li class="navbar_myself">
+                            <a href="#">CONTACT</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <form class="form-inline" action="#" style="margin-right: 10px">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                </form>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <footer style="border-top: 1px solid darkgray; margin-top:40px; padding: 0">
+        <div class="container" style="margin-top: 0">
+            <div class="container" style="margin-top: 0">
+                <div class="row">
+                    <div class="col-md-3 footer-border">
+                        <div>
+                            <h5>TEAM03 Member</h5>
+                        </div>
+                        <ul style="list-style-type: none">
+                            <li class="footer_01">
+                                Nguyễn Huy-Lead+BackEnd
+                            </li>
+                            <li class="footer_01">
+                                Bùi Huy-React
+                            </li>
+                            <li class="footer_01">
+                                Ngọc-BackEnd
+                            </li>
+                            <li class="footer_01">
+                                Vinh-React
+                            </li>
+                            <li class="footer_01">
+                                Linh-BA
+                            </li>
+                            <li class="footer_01">
+                                Hiếu-Androi
+                            </li>
+                            <li class="footer_01">
+                                Nghĩa-.NET
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 footer-border">
+                        <div>
+                            <h5>FOOT</h5>
+                        </div>
+                        <ul style="list-style-type:none">
+                            <li class="footer_02">Bim Bim</li>
+                            <li class="footer_02">Nem Cuon</li>
+                            <li class="footer_02">Keo</li>
+                            <li class="footer_02">Banh</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 footer-border">
+                        <div>
+                            <h5>My Account</h5>
+                        </div>
+
+                        <ul style="list-style-type: none">
+                            <li class="footer_03">
+                                <a href="#">Sig in</a>
+                            </li>
+                            <li class="footer_03">
+                                <a href="#">View Cart</a>
+                            </li>
+                            <li class="footer_03">
+                                <a href="#">Track order</a>
+                            </li>
+                            <li class="footer_03">
+                                <a href="#">help</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-3 footer-border">
+                        <div>
+                            <h5>
+                                Contact
+                            </h5>
+                        </div>
+
+                        <ul style="list-style-type:none">
+                            <li>+039 489 3872</li>
+                            <li>+029 029 1092</li>
+                        </ul>
+
+                        <div style="display: block; border-bottom: none">
+                            <div style="border-bottom: 1px solid darkgray">
+                                <h5>
+                                    FOLLOW US
+                                </h5>
+                            </div>
+
+                            <ul style="list-style-type: none" class="footer_04">
+                                <li><i class="fas fa-bicycle"></i></li>
+                                <li><i class="fas fa-comment"></i></li>
+                                <li><i class="fas fa-dove"></i></li>
+                                <li><i class="fab fa-facebook-square"></i></li>
+                                <li><i class="fab fa-google-plus-square"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div style="background-color: red; padding-top: 5px; height: 100%; margin-bottom: 0">
+            <p style="text-align: center; color: white">&copy; 2019 - SHOPPE CRM - TEAM03 - Desig By: Nghĩa Ngọ</p>
+        </div>
+    </footer>
+
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/js/layout.js"></script>
+    <script src="~/lib/angular/angular.js"></script>
+    <script src="~/lib/angular-ui-router/angular-ui-router.js"></script>
+    <script src="~/js/home.js"></script>
+    <script src="~/js/order.js"></script>
+
+</body>
+</html>

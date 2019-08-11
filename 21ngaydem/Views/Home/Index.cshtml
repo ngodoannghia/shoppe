@@ -1,0 +1,260 @@
+﻿
+@model IEnumerable<HttpRequests.Model.Category>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<link href="~/css/index.css" rel="stylesheet" />
+<div class="container" style="margin-top: 20px; height: 100%" ng-app="myapp" ng-controller="myctr">
+    <div class="row" style="height: 510px">
+        <div class="col-md-4" style="border: 1px solid darkgray; margin: 0px; padding: 0px; height: 100%">
+            <div class="active">
+                <b>CATEGORIES</b>
+            </div>
+            <ul class="toolbar">
+                @foreach (var category in Model)
+                {
+                    <li class="nav-item">
+                        <a href="#" style="font-size: 20px"><i class="fas fa-dolly" style="color: red"></i>        @category.name</a>
+                    </li>
+                }
+
+            </ul>
+        </div>
+
+        <div class="col-md-8 container" style="height: inherit; padding: 0px; padding-left:15px; overflow: hidden" >
+
+            <div class="slide_image">
+                <div class="row" style="margin: 0; height: 15%">
+                    <marquee style="font-family: 'Times New Roman';color: red; font-size: 25px; margin: auto"><i><b id="dealsaletitle">DEAL SALSE BÙNG NỔ - SALSE 50% - FLASL SALSE</b></i></marquee>
+                </div>
+                <div id="slide" class="row" style="margin: 0; height: 85%">
+                    
+                        <div class="col-md-7" style="width: 100%; height: 100%">
+                            <div class="row" style="height: 80%; width: 100%; margin: 0">
+                                <img src={{image}} id="imgId" style="max-height: 100%; max-width: 100%; display: block; margin: auto; width: 100%; height: 100%" />
+                            </div>
+                            <div class="row" style="height: 20%; margin: auto; display: block; position: relative">
+                                <div style="position: absolute; bottom: 10%; width: 100%; text-align: center">
+                                    <marquee style="margin: 0"><b style="color: red">BÃO SALSE</b></marquee>
+                                    <p style="margin: 0"><b id="footer-slide">Chỉ có tại 3MCRM SHOPPE</b></p>
+                                </div>
+
+                            </div>                          
+                        </div>
+                        <div class="col-md-5" style="margin: auto; height: 100%">
+                            <div class="row" style="margin: 0; height: 90%">
+                                <div class="row" style="margin: auto; height: 60%; width: 100%">
+                                    <img src="~/img/laptop1.jpg" style="max-height: 100%; max-width: 100%; margin: auto" />
+                                </div>
+                                <div style="height: 40%; padding: 10px; padding-bottom: 0">
+                                    <div class="row" style="margin: 0; height: 70%">
+                                        <p style="margin: 0"><b>{{product.name}}</b></p>
+                                        <p style="margin: 0">Hãng sản xuất: {{product.brand}}</p>
+                                    </div>
+                                    <div class="row" style="height: 30%; margin: 0; padding-bottom: 5px">
+                                        <div class="col-md-8" style="padding: 0">
+                                            Giá: <span style="color: red"><b>{{product.retailPrice}}</b></span>
+                                        </div>
+                                        <div class="col-md-4" style="padding: 0">
+                                            <button class="btn btn-danger" style="font-size: 10px">Mua ngay</button>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin: 0; width: 100%; text-align: right; padding-top: 10px">
+                                        <a style="text-decoration: none; width: 100%; margin: 0; padding: 0">Xem chi tiết <span class="fas fa-angle-double-right" style="color: red"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+    <div class="row" style="height: 450px;  margin-top: 40px">
+        <div class="row" style="margin: 0; height: 40%; width: 100%">
+            <div class="col-md-12" style="padding: 0; height: 100%; width: 100%">
+                <div style="height: 80%; width: 100%">
+                    <img src="~/img/suynghi.png"  style="max-height: 100%; max-width: 100%; margin: auto; display: block"/>
+                </div>
+                <div style="height: 20%; width: 100%">
+                    <marquee>
+                        <div class="row" style="margin: 0">
+                            <div class="col-md-6" style="padding: 0; color: red; font-size:20px; font-family: 'Times New Roman'">
+                                <i><b>TẠI SAO BẠN NÊN CHỌN 3MCRM SHOPPE</b></i>
+
+                            </div>
+                            <div class="col-md-6" style="padding: 0; color: red; font-size:20px; font-family: 'Times New Roman'">
+
+                                <i><b>TẠI SAO BẠN NÊN CHỌN 3MCRM SHOPPE</b></i>
+
+                            </div>
+                        </div>
+                    </marquee>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin: 0; height: 60%; width: 100%; padding-top: 20px">
+            <div class="col-md-3 introduce">
+                <div>
+                    <i class="fab fa-artstation" style="color: red; font-size: 50px"></i>
+                </div>
+                <div>
+                    <b>Khi bạn ngại ra đường</b>
+                </div>
+                <div>
+                    <p>
+                        Dịch vụ ship hàng tận nơi, nhanh chóng, đảm bảo chất lượng hàng hóa khi vận chuyển
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-md-3 introduce">
+                <div>
+                    <i class="fas fa-baby-carriage" style="color: red; font-size: 50px"></i>
+                </div>
+                <div>
+                    <b>Khi bạn sợ hàng nhái</b>
+                </div>
+                <div>
+                    <p>
+                        Đảm bảo hàng chính hãng 100%, qua kiểm định chất lượng khắt khe
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3 introduce">
+                <div>
+                    <i class="fas fa-calendar-check" style="color: red; font-size: 50px"></i>
+                </div>
+                <div>
+                    <b>Khi bạn sợ mua giá cao</b>
+                </div>
+                <div>
+                    <p>
+                        Luôn bắt kịp giá cả thị trường, đảm bảo giá cả phải chăng, hợp lí
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3 introduce">
+                <div>
+                    <i class="	fas fa-calendar-plus" style="color: red; font-size: 50px"></i>
+                </div>
+                <div>
+                    <b>Khi bạn không biết mua gì</b>
+                </div>
+                <div>
+                    <p>
+                        Luôn có nhân viên hướng dẫn, chăm sóc tận tình đến từng khách hàng
+                    </p>
+                </div>
+            </div>
+           
+            
+        </div>
+    </div>
+    <div class="row" style="height: 200px; border: 1px solid black">
+        <div class="row" style="margin: 0; height: 15%; width: 100%">
+            <div class="col-md-10" style="padding: 0; height: 100%">
+                <div class="row" style="margin: 0">
+                    <div class="col-md-2" style="margin-right: 0;font-size: 18px; color: red">
+                        <i><b>FLASE SALSE: </b></i>
+                    </div>
+                    <div class="col-md-3">
+                        <span ng-model="gio" class="badge badge-dark">{{gio}}</span> :
+                        <span ng-model="phut" class="badge badge-dark">{{phut}}</span> :
+                        <span ng-model="giay" class="badge badge-dark">{{giay}}</span>
+                    </div>
+                </div>        
+            </div>
+            <div class="col-md-2" style="padding: 0; text-align: center; height: 100%">
+                <a>Xem tất cả <span class="fas fa-angle-double-right" style="color: red"></span></a>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="border: 1px solid darkgray; padding: 15px; margin-top: 20px; box-shadow: 1px 1px darkgray">
+        <div class="col-md-2">
+            <b>NEW PRODUCT</b>
+        </div>
+        <div class="col-md-8">
+         
+        </div>
+        <div class="col-md-2" >
+            <a href="#" style="text-decoration: none; color: black; float: right; text-align: right">
+                See all product <span class="fas fa-angle-double-right" style="color: red"></span>
+            </a>
+        </div>
+    </div>
+    <div class="row new-product">
+
+        <div class="col-md-3 item-product" ng-repeat="x in product4">
+            <div style="padding: 10px; height: 100%; border: 1px solid darkgray">
+                <div class="row" style="height: 50%;margin:auto">
+                    <img src="~/img/laptop1.jpg" style="max-height: 100%; max-width: 100%; margin:auto; display: block" />
+                </div>
+                <div class="row" style="height: 30%; margin: auto; border-bottom: 1px solid red">
+                    <p><b>{{x.name}}</b></p>
+                    <p><b><i>Hãng sản xuất: </i></b>{{x.brand}}</p>
+                </div>
+                <div class="row" style="height: 20%">
+                    <div class="col-md-7">
+                        <p><i>Giá: </i><span style="color: red">{{x.retailPrice}} đ</span></p>
+                        <p>
+                            <b>5</b>
+                            <i class="fas fa-star" style="color: red"></i>
+                            <i class="fas fa-star" style="color: red"></i>
+                            <i class="fas fa-star" style="color: red"></i>
+                            <i class="fas fa-star" style="color: red"></i>
+                            <i class="fas fa-star" style="color: red"></i>
+                        </p>
+                    </div>
+                    <div class="col-md-5" style="text-align: right; padding-top: 4%">
+                        <button class="btn btn-danger" style="font-size: 12px">Mua ngay</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        @*
+        <div style="width: 22%; margin-left: 4%" class="item-product">
+            <div style="padding: 5%">
+                <img style="width:100%; height: 100px" src="#" />
+                <p>Ten san pham</p>
+                <div class="product">
+                    <div style="display: inline; float: left">Gia</div>
+                    <button style="background-color: red; float: right; color: white; padding:4px">Add to card</button>
+                </div>
+                <div style="clear: left"></div>
+            </div>
+        </div>
+        <div style="width: 22%; margin-left: 4%" class="item-product">
+            <div style="padding: 5%">
+                <img style="width:100%; height: 100px" src="#" />
+                <p>Ten san pham</p>
+                <div class="product">
+                    <div style="display: inline; float: left">Gia</div>
+                    <button style="background-color: red; float: right; color: white; padding:4px">Add to card</button>
+                </div>
+                <div style="clear: left"></div>
+            </div>
+
+        </div>
+        <div style="width: 22%; margin-left: 4%" class="item-product">
+            <div style="padding: 5%">
+                <img style="width:100%; height: 100px" src="#" />
+                <p>Ten san pham</p>
+                <div class="product">
+                    <div style="display: inline; float: left">Gia</div>
+                    <button style="background-color: red; float: right; color: white; padding:4px">Add to card</button>
+                </div>
+                <div style="clear: left"></div>
+            </div>
+        </div>
+        *@
+    </div>
+</div>
+

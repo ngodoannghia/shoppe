@@ -1,0 +1,337 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" ng-app="myapporder" ng-controller="myctrorder" style="margin-top: 2%">
+    <div>
+        <div class="row">
+            <div class="col-md-5 image-order">
+                <div class="row single-image" style="width: 100%; height: 465px">
+                    <img style="max-height:100%; max-width: 100%; margin: auto; display: block" src="~/img/{{image}}" />
+                </div>
+                <div class="row list-image" style="margin-top: 1%; width: 100%; border: 1px solid darkgray ;margin-left: 0">
+                    <div ng-repeat="x in images" ng-model="images" class="col-md-3" ng-mouseover="slide($index)" style="padding: 0" id="image-repeat-order">
+                        <img style="max-height:100%; max-width: 100%; margin: auto;display: block" src="~/img/{{x}}" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-7" style="padding-right: 0px; padding-left: 10px">
+                <div style="border: 1px solid darkgray; height: 100%">
+                    <div style="display: block; padding-top:15px;padding-left: 10px; font-size: 20px; text-align: center">
+                        <i class="fas fa-tags" ; style="color: red"></i><span><b>{{data.name}}</b></span>
+                        <p>{{data.description}}</p>
+                    </div>
+                    <div class="row title-order">
+                        <div class="col-md-4">
+                            <b>{{5}}</b>
+                            <i class="fas fa-star" style="color: red"></i>
+                            <i class="fas fa-star" style="color: red"></i>
+                            <i class="fas fa-star" style="color: red"></i>
+                            <i class="fas fa-star" style="color: red"></i>
+                            <i class="fas fa-star" style="color: red"></i>
+                        </div>
+                        <div class="col-md-4">
+                            <b>{{99}}</b> <span>Đánh giá</span>
+                        </div>
+                        <div class="col-md-4" style="border: none">
+                            <b>{{data.soldQuantity}}</b> <span>Đã bán</span>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div class="row gia-order">
+                        <div class="col-md-5">
+                            <i style="font-size: 15px">Giá bán: </i>
+                            <span style="font-size: 20px; color: red">  {{data.retailPrice}} đ</span>
+                        </div>
+                        <div class="col-md-4">
+
+                        </div>
+                        <div class="col-md-3">
+                            <span class="fas fa-tags" style="color: hotpink">Đã bán: {{data.soldQuantity}}</span>
+                        </div>
+
+                    </div>
+                    <div class="row mota-order">
+                        <div>
+                            <b>Số hàng trong kho: </b> {{data.quantity}}
+                        </div>
+                        <div>
+                            <b>Xuất sứ: </b> {{data.origin}}
+                        </div>
+                        <div>
+                            <b>Nhãn hiệu: </b>{{data.brand}}
+                        </div>
+                        <div>
+                            <b>Số lượng: </b><input type="number" min="1" max={{data.quantity}} style="width: 50%" />
+                        </div>
+                        <div style="margin-top: 20px">
+                            <button class="btn btn-info">Add to card</button>
+                            <button class="btn btn-danger">Mua ngay</button>
+                        </div>
+
+                    </div>
+                    <div class="row proxy-order">
+                        <input type="checkbox" checked /><span style="margin-right: 5%"> 48h hoàn trả</span>
+                        <input type="checkbox" disabled checked style="opacity: 0.3" /><span style="opacity: 0.3"> Kiểm hàng khi nhận</span>
+                    </div>
+                    <div class="row footer-order">
+                        <input type="checkbox" checked disabled />
+                        <span>  <span style="color: red">3MCRM SHOPPE</span> - Cam kết hàng chất lượng đến mọi người</span>
+                    </div>
+                    <div class="row footerimage-order">
+                        <img id="animation-footer" style="position: absolute;max-height: 100%; max-width: 100%; display: block; top: 0px; left: 0px" src="~/img/logo.png" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row" style="padding-top: 1%">
+            <div class="col-md-3">
+
+                <ul style="list-style-type: none" class="footericon-order">
+                    <li><b style="color: red">Share</b>: </li>
+                    <li><i class="fas fa-bicycle" style="color: cadetblue"></i></li>
+                    <li><i class="fas fa-comment"></i></li>
+                    <li><i class="fas fa-dove" style="color:aqua"></i></li>
+                    <li><i class="fab fa-facebook-square" style="color: blue"></i></li>
+                    <li><i class="fab fa-google-plus-square" style="color: red"></i></li>
+                </ul>
+
+            </div>
+            <div class="col-md-2">
+                <i class="far fa-heart" style="color: red"></i><span>  Lượt thích (10)</span>
+            </div>
+
+            <div class="col-md-3" style="display: block; padding-left: 0px">
+                <div style="text-align: center">
+                    <i class="fab fa-css3" style="font-size: 35px; color: red"></i>
+                </div>
+                <div style="text-align: center">
+                    <p>7 ngày trả hàng miễn phí</p>
+                </div>
+            </div>
+            <div class="col-md-2" style="display: block; padding-left: 0px">
+                <div style="text-align: center">
+                    <i class="fas fa-clipboard-check" style="font-size: 35px; color: red"></i>
+                </div>
+                <div style="text-align: center">
+                    <p>Hàng chính hãng 100%</p>
+                </div>
+            </div>
+            <div class="col-md-2" style="display: block; padding-left: 0px">
+                <div style="text-align: center">
+                    <i class="fas fa-car-side" style="font-size: 35px; color: red"></i>
+                </div>
+                <div style="text-align: center">
+                    <p>Miễn phí vẫn chuyển</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="box-shadow: 1px 1px 1px 1px darkgray; margin-top: 20px">
+        <div class="col-md-5" style="border-right: 1px solid darkgray; padding-left: 0">
+            <div class="row" style="margin: 0">
+                <div class="col-md-4" style="padding: 0; margin: auto">
+                    <img style="max-height:100%; max-width: 100%" src="~/img/logo.png" />
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-7" style="padding: 0">
+                    <div>
+                        <p>
+                            <b>3MCRM SHOPPE  </b>
+                            <i class="fab fa-viber" style="color: aqua"></i>
+                        </p>
+                        <p style="font-size: 10px">
+                            <i class="fas fa-toggle-on" style="color: chartreuse"></i>
+                            <span>Hoạt động cách đây 1 tuần</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-star" style="color: red"></i>
+                            <i class="fas fa-star" style="color: red"></i>
+                            <i class="fas fa-star" style="color: red"></i>
+                            <i class="fas fa-star" style="color: red"></i>
+                            <i class="fas fa-star" style="color: red"></i>
+                            <span>  4.9 <i style="color: darkgray">(130 đánh giá)</i></span>
+                        </p>
+                        <p>Kho hàng: <span style="color: aqua">Hà Nội</span></p>
+                        <p>
+                            <button style="border: 1px solid darkgray"><i class="far fa-heart" style="color: darkgray"></i>  Theo dõi</button>
+                            <button style="border: 1px solid darkgray"><i class="fas fa-store" style="color:red"></i>  Vào shop</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="description-shop col-md-7">
+
+
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <i class="fas fa-store" style="color: red"></i><span> 2 năm 9 tháng 10 ngày</span>
+                    </div>
+                </div>
+                <div style="text-align: center; opacity: 0.5">
+                    Thời gian hoạt động
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <i class="fab fa-windows" style="color: aqua"></i><span>    1000</span>
+
+                    </div>
+                </div>
+                <div style="text-align: center; opacity: 0.5">
+                    Sản phẩm
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <i class="fas fa-warehouse" style="color: red"></i><span>   6 ngày</span>
+                    </div>
+
+                </div>
+                <div style="text-align: center; opacity: 0.5">
+                    Thời gian giao hàng
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <i class="fas fa-vote-yea" style="color: red"></i><span>  24 giờ</span>
+                    </div>
+
+                </div>
+                <div style="text-align: center; opacity: 0.5">
+                    <p>Thời gian phản hồi</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="chitiet-order row" style="margin-top: 50px">
+        <div class="chitiet-order-child col-md-8">
+            <div style="border: 1px solid darkgray; height: 100%">
+                <div class="row" style="margin: 0; padding: 10px">
+                    <div class="container">
+                        <div class="row" style="margin: 0; border-bottom: 1px solid darkgray">
+                            <div class="col-md-4">
+                                <a ui-sref="detail">CHI TIẾT SẢN PHẨM</a>
+                            </div>
+                            <div class="col-md-4">
+                                <a ui-sref="danhgia">ĐÁNH GIÁ</a>
+                            </div>
+                            <div class="col-md-4">
+                                <a ui-sref="hoidap">HỎI ĐÁP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin: 0; padding: 10px">
+                    <div ui-view style="width: 100%"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="product-hot col-md-4">
+            <div class="row" style="margin: 0; padding: 10px; background-color: red; text-align: center">
+                <b style="color: white; margin:auto">SẢN PHẨM HOT</b>
+            </div>
+
+            <div class="row" style="margin: 0; margin-top: 2%; border: 1px solid darkgray">
+                <div class="col-md-4" style="margin: auto">
+                    <img src="/img/laptop1.jpg" style="max-height: 100%; max-width: 100%; margin: auto; display: block" />
+                </div>
+                <div class="col-md-8">
+                    <div class="row" style="margin: 0; height: 50%">
+                        <b>{{data.name}}</b>
+                    </div>
+                    <div class="row" style="margin: 0; height: 50%">
+                        <div class="col-md-8" style="color: red; font-size: 15px; padding: 0">
+                            <i><b>Giá: </b></i>{{data.retailPrice}}đ
+                            <p>
+                                <i class="fas fa-star" style="color: red"></i>
+                                <i class="fas fa-star" style="color: red"></i>
+                                <i class="fas fa-star" style="color: red"></i>
+                                <i class="fas fa-star" style="color: red"></i>
+                                <i class="fas fa-star" style="color: red"></i>
+                            </p>
+                        </div>
+
+                        <div class="col-md-4" style="padding: 0">
+                            <button class="btn btn-danger">Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row" style="margin: 0; margin-top: 2%; border: 1px solid darkgray">
+                <div class="col-md-4" style="margin: auto">
+                    <img src="/img/laptop1.jpg" style="max-height: 100%; max-width: 100%; margin: auto; display: block" />
+                </div>
+                <div class="col-md-8">
+                    <div class="row" style="margin: 0; height: 50%">
+                        <b>{{data.name}}</b>
+                    </div>
+                    <div class="row" style="margin: 0; height: 50%">
+                        <div class="col-md-8" style="color: red; font-size: 15px; padding: 0">
+                            <i><b>Giá: </b></i>{{data.retailPrice}}đ
+                            <p>
+                                <i class="fas fa-star" style="color: red"></i>
+                                <i class="fas fa-star" style="color: red"></i>
+                                <i class="fas fa-star" style="color: red"></i>
+                                <i class="fas fa-star" style="color: red"></i>
+                                <i class="fas fa-star" style="color: red"></i>
+                            </p>
+                        </div>
+
+                        <div class="col-md-4" style="padding: 0">
+                            <button class="btn btn-danger">Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row" style="margin: 0; margin-top: 2%; border: 1px solid darkgray">
+                <div class="col-md-4" style="margin: auto">
+                    <img src="/img/laptop1.jpg" style="max-height: 100%; max-width: 100%; margin: auto; display: block" />
+                </div>
+                <div class="col-md-8">
+                    <div class="row" style="margin: 0; height: 50%">
+                        <b>{{data.name}}</b>
+                    </div>
+                    <div class="row" style="margin: 0; height: 50%">
+                        <div class="col-md-8" style="color: red; font-size: 15px; padding: 0">
+                            <i><b>Giá: </b></i>{{data.retailPrice}}đ
+                            <p>
+                                <i class="fas fa-star" style="color: red"></i>
+                                <i class="fas fa-star" style="color: red"></i>
+                                <i class="fas fa-star" style="color: red"></i>
+                                <i class="fas fa-star" style="color: red"></i>
+                                <i class="fas fa-star" style="color: red"></i>
+                            </p>
+                        </div>
+
+                        <div class="col-md-4" style="padding: 0">
+                            <button class="btn btn-danger">Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div style="text-align: right">
+                <a href="#" style="text-decoration: none; color: black; font-size: 15px">See all <span class="fas fa-angle-double-right" style="color: red"></span></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+

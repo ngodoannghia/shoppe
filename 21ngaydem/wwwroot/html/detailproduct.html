@@ -1,0 +1,30 @@
+﻿
+<div class="container" ng-controller="detailcontroller">
+    <div class="row" style="margin: 0; box-shadow: 1px 1px 1px 1px darkgray">
+        <div class="col-md-6" style="padding: 10px; height: 100%; padding-left: 0">
+            <div style="text-align:left; padding: 10px">
+                <p><b>Mã sản phẩm: </b>SP{{data.id}}</p>
+                <p><b>Tên sản phẩm: </b>{{data.name}}</p>
+                <p><b>Xuất sứ: </b>{{data.origin}}</p>
+                <p><b>Nhãn hiệu: </b>{{data.brand}}</p>
+                <p><b>Hàng trong kho: </b>{{data.quantity}}</p>
+                <p><b>Giá bán buôn: </b>{{data.wholesalePrice}}</p>
+                <p><b>Giá bán lẻ: </b>{{data.retailPrice}}</p>
+            </div>
+
+        </div>
+        <div class="col-md-6" style="padding: 10px; text-align: left; height:100%; padding-right: 0">
+            <div style="text-align: left; padding: 10px; padding-bottom: 15px">
+                
+                <p><b>Thuế: </b>{{data.tax}}</p>
+                <p><b>Mô tả: </b>{{data.description}}</p>
+                <p><b>Loại hàng hóa: </b>{{data.categoryProduct.name}}</p>
+                <p><b>Số lượng đã bán: </b>{{data.soldQuantity}}</p>
+                <p><b>Đơn vị: </b>{{data.unit}}</p>
+                <p><b>CatName: </b>{{data.catName}}</p>
+            </div>
+
+        </div>
+    </div>
+    
+</div>

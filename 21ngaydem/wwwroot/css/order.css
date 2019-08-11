@@ -1,0 +1,143 @@
+﻿body {
+}
+.image-order{
+    margin: 0;
+    padding: 0;
+}
+.list-image{
+    margin-right: 0;
+}
+.list-image div{
+    width: 25%;
+}
+.list-image div img{
+    margin: 0px;
+    display: inline;
+}
+#image-repeat-order:hover {
+    border: 1px solid red;
+}
+.single-image {
+    border: 1px solid darkgray;
+    margin:auto;
+}
+.title-order{
+    margin-right: 0;
+    margin-left: 0;
+    padding: 10px;
+    border-bottom: 1px solid darkgray;
+}
+.title-order div {
+    text-align: center;
+    border-right: 1px solid darkgray;
+}
+.title-order div span{
+    font-size: 12px;
+    color: red;
+}
+.gia-order {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 10px;
+    border-bottom: 1px solid darkgray;
+    width: 100%;
+}
+.mota-order {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 10px;
+    border-bottom: 1px solid darkgray;
+    width: 100%;
+    display: block;
+}
+.mota-order div{
+    display: block;
+    margin-top: 10px;
+}
+.mota-order div button{
+    margin-right: 20%;
+}
+.proxy-order {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 10px;
+    border-bottom: 1px solid darkgray;
+    width: 100%;
+   display: inline-block;
+}
+.footer-order {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 10px;
+    max-width: 100%;
+    display: inline-block;
+    max-height: 100%;
+    text-align: center;
+}
+.footerimage-order {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-width: 100%;
+    display: block;
+    max-height: 100%;
+    text-align: center;
+    position: relative;
+    height: 15%;
+    bottom: 0;
+    overflow: hidden;
+}
+#animation-footer{
+    position: relative;
+    animation-name: footer01;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    display: block;
+    animation-iteration-count: infinite;
+}
+@keyframes footer01{
+    0% {left: 0%; top: 0%}
+    100%{left: 100%; top: 0%;}
+}
+.footericon-order{
+    padding-left: 0;
+}
+.footericon-order li{
+    display: inline;
+    font-size: 20px;
+}
+.description-shop{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin: auto;
+    padding-top: 1%;
+}
+.description-shop div{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.chitiet-order{
+    margin-top: 30px;
+}
+.chitiet-order-child{
+    padding-right: 15px;
+    padding-left: 0;
+}
+.chitiet-order-child div div{
+    text-align: center;
+}
+.chitiet-order-child div div a{
+    text-decoration: none;
+}
+.chitiet-order-child div div a:hover {
+    text-decoration: none;
+    color: red;
+}
+.product-hot {
+    padding: 0;
+}
+

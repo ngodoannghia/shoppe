@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "21ngaydem", "21ngaydem\21ngaydem.csproj", "{8A095733-E9BB-4C6F-8CC6-AA0184FFF4D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpRequests", "HttpRequests\HttpRequests.csproj", "{30EF074C-47A2-410A-B553-A368F8BA27CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A095733-E9BB-4C6F-8CC6-AA0184FFF4D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A095733-E9BB-4C6F-8CC6-AA0184FFF4D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A095733-E9BB-4C6F-8CC6-AA0184FFF4D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A095733-E9BB-4C6F-8CC6-AA0184FFF4D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30EF074C-47A2-410A-B553-A368F8BA27CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30EF074C-47A2-410A-B553-A368F8BA27CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30EF074C-47A2-410A-B553-A368F8BA27CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30EF074C-47A2-410A-B553-A368F8BA27CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52F847F2-3E5F-4105-83FB-8CE4B2215560}
+	EndGlobalSection
+EndGlobal

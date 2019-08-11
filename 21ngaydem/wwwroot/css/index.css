@@ -1,0 +1,115 @@
+﻿body {
+}
+
+.active{
+    background-color: red;
+    font-size: 30px;
+    color: white;
+    padding-left: 10px;
+}
+.toolbar{
+    width: 90%;
+    list-style-type: none;
+    padding-left: 30px;
+}
+.toolbar li{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid darkgray;
+}
+.toolbar li a{
+    text-decoration: none;
+    color: darkgray;
+}
+.toolbar li a:hover{
+    color: red;
+}
+.slide_image {
+    width: 100%;
+    height: inherit;
+    box-sizing: border-box;
+    border: 1px solid darkgray;
+}
+.product {
+    border-top: 1px solid red;
+    height: auto;
+    float: left;
+    width: 100%;
+}
+.new-product{
+    display: flex;
+    margin-top: 25px;
+    height: 300px;
+    border: 1px solid darkgray;
+}
+.item-product {
+    padding: 0;
+    height: 100%;
+
+}
+.item-product div div p{
+   display: block;
+   width: 100%;
+   margin: auto;
+   text-align: center;
+}
+#dealsaletitle{
+    animation-name: deal;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes deal{
+    0%{color: red;}
+    25%{color:aqua}
+    50%{color: black}
+    75%{color:hotpink}
+    90%{color:yellow}
+}
+#imgId{
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    animation-name: imageslide;
+    animation-duration: 5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes imageslide {
+    0%{opacity:1}
+    10%{opacity: 0.9}
+    20%{opacity: 0.8}
+    30%{opacity: 0.7}
+    40%{opacity: 0.6}
+    50%{opacity: 0.5}
+    60%{opacity: 0.4}
+    70%{opacity: 0.3}
+    80%{opacity: 0.2}
+    90%{opacity: 0.1}
+    100%{opacity: 0}
+}
+#footer-slide{
+    animation-name: footerslide;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+}
+@keyframes footerslide{
+    0%{color: red; text-shadow: 1px 1px 1px 1px darkgray}
+    20%{color: yellow;}
+    40%{color: deepskyblue; text-shadow: 1px 1px 1px 1px darkgray}
+    60%{color: black;}
+    80% {
+        color: darkgray;
+        text-shadow: 1px 1px 1px 1px darkgray
+    }
+    100%{
+        color: chartreuse;
+    }
+
+}
+.introduce{
+    padding: 0;
+}
+.introduce div{
+    text-align: center;
+}
